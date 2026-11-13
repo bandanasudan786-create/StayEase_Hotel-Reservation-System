@@ -2,7 +2,23 @@
 
 StayEase is a DBMS project developed using **React.js, Node.js (Express.js), and PostgreSQL**. It demonstrates relational database normalization (3NF), database constraints, triggers, views, ACID transactions, and temporal exclusion-based concurrency control through real-world hotel reservation workflows.
 
-## 1. Project Structure
+## 1. Project Objective
+
+The main objective of StayEase is to demonstrate how database management system concepts can be applied to a practical hotel reservation application while maintaining data integrity, consistency, security, and reliable transaction processing.
+
+## 2. Project Highlights
+
+- Complete hotel reservation management workflow.
+- Role-based access for administrators, customers, and hotel managers.
+- Hotel and room search functionality.
+- Real-time room availability checking.
+- Secure authentication using JWT.
+- Reservation management and status updates.
+- PostgreSQL-based concurrency control.
+- Database triggers, views, and normalized schema.
+
+
+## 3. Project Structure
 
 ```text
 DBMS PROJECT/
@@ -31,7 +47,7 @@ DBMS PROJECT/
 └── README.md
 ```
 
-## 2. Technology Stack
+## 4. Technology Stack
 
 - **Frontend:** React.js (v18+) with Vite
 - **Backend:** Node.js with Express.js
@@ -39,7 +55,7 @@ DBMS PROJECT/
 - **Database Driver:** pg (node-postgres)
 - **Styling:** CSS3
 
-## 3. Database Setup
+## 5. Database Setup
 
 ### Step 1: Create Database
 
@@ -59,7 +75,7 @@ psql -U postgres -d stayease_db -f database/stayease_schema.sql
 psql -U postgres -d stayease_db -f database/sample_data.sql
 ```
 
-## 4. How to Run the Application
+## 6. How to Run the Application
 
 ### Step 1: Start Backend
 
@@ -90,7 +106,7 @@ All `/api` requests are proxied to the backend using Vite configuration.
 
 **Note:** Configure your PostgreSQL credentials and JWT settings in the backend `.env` file using `.env.example` as a reference. Never upload your actual `.env` file to GitHub.
 
-## 5. Backend API Endpoints
+## 7. Backend API Endpoints
 
 | Method | Endpoint | Access | Description |
 |---|---|---|---|
@@ -110,7 +126,7 @@ All `/api` requests are proxied to the backend using Vite configuration.
 | GET | `/api/admin/reservations` | Admin Only | View all reservations |
 | PATCH | `/api/admin/reservations/:id/status` | Admin Only | Update reservation status |
 
-## 6. Demo Accounts
+## 8. Demo Accounts
 
 All demo accounts use the password `Password@123`.
 
@@ -123,7 +139,7 @@ All demo accounts use the password `Password@123`.
 | Mumbai Manager | `manager.mumbai@stayease.com` |
 | Goa Manager | `manager.goa@stayease.com` |
 
-## 7. Key DBMS Concepts Implemented
+## 9. Key DBMS Concepts Implemented
 
 ### 1. Relational Database Normalization (3NF)
 - Nine normalized relational tables.
@@ -164,17 +180,3 @@ All demo accounts use the password `Password@123`.
 
 ---
 
-## 8. Project Highlights
-
-- Complete hotel reservation management workflow.
-- Role-based access for administrators, customers, and hotel managers.
-- Hotel and room search functionality.
-- Real-time room availability checking.
-- Secure authentication using JWT.
-- Reservation management and status updates.
-- PostgreSQL-based concurrency control.
-- Database triggers, views, and normalized schema.
-
-## 9. Project Objective
-
-The main objective of StayEase is to demonstrate how database management system concepts can be applied to a practical hotel reservation application while maintaining data integrity, consistency, security, and reliable transaction processing.
